@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifyco — Превью страниц ТР ТС</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --brand:#1a1a2e;
+  --accent:#2563eb;
+  --accent-light:#eff6ff;
+  --accent-mid:#1d4ed8;
+  --gray-50:#f9fafb;
+  --gray-100:#f3f4f6;
+  --gray-200:#e5e7eb;
+  --gray-300:#d1d5db;
+  --gray-500:#6b7280;
+  --gray-700:#374151;
+  --gray-900:#111827;
+  --green:#16a34a;
+  --green-light:#f0fdf4;
+  --orange:#ea580c;
+  --orange-light:#fff7ed;
+  --red:#dc2626;
+  --red-light:#fef2f2;
+}
+body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;font-size:15px;line-height:1.6}
+
+/* NAV SWITCHER */
+.nav-switcher{background:#fff;border-bottom:1px solid var(--gray-200);padding:12px 0;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.nav-switcher-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nav-label{font-size:12px;color:var(--gray-500);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-right:4px;white-space:nowrap}
+.nav-btn{background:var(--gray-100);border:1px solid var(--gray-200);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer;color:var(--gray-700);font-family:'Inter',sans-serif;transition:all .15s;white-space:nowrap}
+.nav-btn:hover{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
+.nav-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* SITE HEADER */
+.site-header{background:var(--brand);color:#fff;padding:14px 0}
+.site-header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:700;font-size:20px;letter-spacing:-.5px}
+.logo span{color:#60a5fa}
+.header-contacts{font-size:13px;opacity:.8;text-align:right}
+.header-contacts a{color:#93c5fd;text-decoration:none}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;border-bottom:1px solid var(--gray-200);padding:10px 0}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;gap:6px;align-items:center;font-size:13px;color:var(--gray-500)}
+.breadcrumb a{color:var(--accent);text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+.bc-sep{color:var(--gray-300)}
+
+/* HERO */
+.hero{background:var(--brand);color:#fff;padding:52px 0 48px}
+.hero-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start}
+.hero h1{font-size:32px;font-weight:700;line-height:1.25;margin-bottom:14px}
+.hero-sub{font-size:16px;opacity:.8;line-height:1.6;margin-bottom:24px}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:6px 14px;font-size:13px;display:flex;align-items:center;gap:6px}
+.badge-green{background:rgba(22,163,74,.2);border-color:rgba(74,222,128,.3);color:#86efac}
+.hero-cta-wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:13px 28px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s}
+.btn-primary:hover{background:var(--accent-mid)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:12px 22px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+
+/* HERO FORM */
+.hero-form{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:24px}
+.hero-form h3{font-size:16px;font-weight:600;margin-bottom:16px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:12px;opacity:.7;margin-bottom:5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;font-family:'Inter',sans-serif}
+.form-group input::placeholder{opacity:.5}
+.form-group textarea{resize:vertical;min-height:72px}
+.form-submit{width:100%;background:#2563eb;color:#fff;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s}
+.form-submit:hover{background:var(--accent-mid)}
+.form-note{font-size:11px;opacity:.5;text-align:center;margin-top:8px}
+
+/* PRICE STRIP */
+.price-strip{background:var(--accent-light);border-bottom:1px solid #bfdbfe;padding:16px 0}
+.price-strip-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;gap:48px;align-items:center;flex-wrap:wrap}
+.price-item{display:flex;flex-direction:column;gap:2px}
+.price-label{font-size:12px;color:var(--accent-mid);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.price-val{font-size:22px;font-weight:700;color:var(--accent)}
+
+/* CONTENT */
+.content{max-width:1100px;margin:0 auto;padding:0 24px}
+.page-section{padding:40px 0;border-bottom:1px solid var(--gray-200)}
+.page-section:last-child{border-bottom:none}
+.section-title{font-size:22px;font-weight:700;color:var(--gray-900);margin-bottom:8px}
+.section-subtitle{font-size:15px;color:var(--gray-500);margin-bottom:24px}
+.section-text{color:var(--gray-700);margin-bottom:16px;line-height:1.75}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* TABLES */
+.data-table{width:100%;border-collapse:collapse;font-size:14px}
+.data-table th{background:var(--gray-900);color:#fff;padding:11px 14px;text-align:left;font-weight:600;font-size:13px}
+.data-table th:first-child{border-radius:6px 0 0 0}
+.data-table th:last-child{border-radius:0 6px 0 0}
+.data-table td{padding:10px 14px;border-bottom:1px solid var(--gray-200);vertical-align:top}
+.data-table tr:hover td{background:var(--gray-50)}
+.data-table tr:last-child td{border-bottom:none}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600}
+.tag-cert{background:#dbeafe;color:#1e40af}
+.tag-decl{background:#d1fae5;color:#065f46}
+.tag-both{background:#fef9c3;color:#713f12}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--gray-100)}
+.step:last-child{border-bottom:none}
+.step-num{width:40px;height:40px;min-width:40px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px}
+.step-body{}
+.step-title{font-weight:600;font-size:15px;margin-bottom:4px}
+.step-desc{color:var(--gray-500);font-size:14px}
+.step-time{display:inline-block;background:var(--accent-light);color:var(--accent);border-radius:4px;padding:1px 8px;font-size:12px;font-weight:600;margin-top:6px}
+
+/* DOCS LIST */
+.docs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.docs-box{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:20px}
+.docs-box h4{font-size:14px;font-weight:700;margin-bottom:12px;color:var(--gray-900)}
+.docs-list{list-style:none}
+.docs-list li{padding:5px 0;font-size:14px;color:var(--gray-700);display:flex;gap:8px;align-items:flex-start}
+.docs-list li::before{content:"";width:6px;height:6px;min-width:6px;background:var(--accent);border-radius:50%;margin-top:7px}
+
+/* ALERT */
+.alert{border-radius:10px;padding:18px 20px;margin-bottom:20px;border:1px solid;display:flex;gap:14px;align-items:flex-start}
+.alert-icon{font-size:20px;min-width:24px}
+.alert-blue{background:var(--accent-light);border-color:#bfdbfe;color:#1e3a5f}
+.alert-orange{background:var(--orange-light);border-color:#fed7aa;color:#7c2d12}
+.alert-red{background:var(--red-light);border-color:#fecaca;color:#7f1d1d}
+.alert-green{background:var(--green-light);border-color:#bbf7d0;color:#14532d}
+.alert-title{font-weight:700;font-size:14px;margin-bottom:4px}
+.alert-text{font-size:14px;line-height:1.65}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid var(--gray-200)}
+.faq-q{padding:16px 0;cursor:pointer;font-weight:600;font-size:15px;display:flex;justify-content:space-between;align-items:center;user-select:none}
+.faq-q:hover{color:var(--accent)}
+.faq-arrow{font-size:18px;color:var(--gray-400);transition:transform .2s}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 0 16px;color:var(--gray-600);font-size:14px;line-height:1.75}
+.faq-item.open .faq-a{display:block}
+
+/* ADVANTAGES */
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.adv-card{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:20px}
+.adv-icon{font-size:28px;margin-bottom:10px}
+.adv-title{font-weight:700;font-size:14px;margin-bottom:6px}
+.adv-text{font-size:13px;color:var(--gray-500);line-height:1.6}
+
+/* PENALTY BOX */
+.penalty-box{background:var(--red-light);border:1px solid #fecaca;border-radius:10px;padding:24px}
+.penalty-title{font-weight:700;font-size:16px;color:#7f1d1d;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.penalty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.penalty-item{background:rgba(220,38,38,.07);border-radius:8px;padding:14px;text-align:center}
+.penalty-role{font-size:12px;color:#991b1b;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.penalty-amt{font-size:18px;font-weight:700;color:#7f1d1d}
+
+/* MISTAKES */
+.mistakes-list{display:flex;flex-direction:column;gap:10px}
+.mistake-item{background:#fff;border:1px solid var(--gray-200);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:14px 16px}
+.mistake-title{font-weight:700;font-size:14px;margin-bottom:4px}
+.mistake-text{font-size:13px;color:var(--gray-500)}
+
+/* CTA BLOCK */
+.cta-block{background:linear-gradient(135deg,var(--brand) 0%,#1e3a6e 100%);border-radius:12px;padding:36px 40px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:32px;margin:40px 0}
+.cta-block h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.cta-block p{opacity:.75;font-size:15px}
+.cta-actions{display:flex;flex-direction:column;gap:10px;min-width:260px}
+.cta-phone{font-size:20px;font-weight:700;color:#60a5fa}
+.cta-email{font-size:13px;opacity:.7}
+
+/* INTERNAL LINKS */
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.related-link{background:#fff;border:1px solid var(--gray-200);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--gray-900);display:flex;justify-content:space-between;align-items:center;transition:all .15s}
+.related-link:hover{border-color:var(--accent);color:var(--accent)}
+.related-link-text{font-size:14px;font-weight:500}
+.related-arrow{color:var(--gray-300);font-size:18px}
+
+/* PAGE WRAPPER */
+.page-view{display:none}
+.page-view.active{display:block}
+
+/* FOOTER */
+.site-footer{background:var(--brand);color:rgba(255,255,255,.6);padding:32px 0;margin-top:40px}
+.site-footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
+.site-footer a{color:rgba(255,255,255,.5);text-decoration:none}
+
+/* SCHEMA NOTE */
+.schema-note{background:var(--gray-50);border:1px dashed var(--gray-300);border-radius:8px;padding:12px 16px;font-size:12px;color:var(--gray-500);margin-top:24px}
+.schema-note strong{color:var(--gray-700)}
+
+/* IMPORTANT NOTE */
+.important{background:#fef9c3;border:1px solid #fde047;border-radius:8px;padding:14px 16px;font-size:14px;color:#713f12;margin-bottom:16px}
+.important strong{color:#92400e}
+</style>
+</head>
+<body>
+
+<!-- NAV SWITCHER -->
+<div class="nav-switcher">
+  <div class="nav-switcher-inner">
+    <span class="nav-label">Превью страниц:</span>
+    <button class="nav-btn active" onclick="showPage('p010')">ТР ТС 010/2011</button>
+    <button class="nav-btn" onclick="showPage('p012')">ТР ТС 012/2011</button>
+    <button class="nav-btn" onclick="showPage('p019')">ТР ТС 019/2011</button>
+    <button class="nav-btn" onclick="showPage('p004')">ТР ТС 004/2011</button>
+    <button class="nav-btn" onclick="showPage('p004020')">Декл. 004/020</button>
+    <button class="nav-btn" onclick="showPage('p020')">ТР ТС 020/2011</button>
+    <button class="nav-btn" onclick="showPage('p032')">ТР ТС 032/2013</button>
+  </div>
+</div>
+
+<!-- SITE HEADER (shared) -->
+<div class="site-header">
+  <div class="site-header-inner">
+    <div class="logo">Сертифи<span>ко</span></div>
+    <div class="header-contacts">
+      <div><a href="tel:+74952483800">+7 (495) 248-38-00</a></div>
+      <div>mail@certifyco.ru</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: ТР ТС 010/2011 ===== -->
+<div class="page-view active" id="p010">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span>
+  <a href="#">Услуги</a><span class="bc-sep">›</span>
+  <a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span>
+  <span>Сертификат ТР ТС 010/2011</span>
+</div></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ Аккредитованный орган</div>
+        <div class="badge">Работаем по всей России</div>
+        <div class="badge">Опыт 6+ лет</div>
+      </div>
+      <h1>Сертификат ТР ТС 010/2011 на машины и оборудование</h1>
+      <p class="hero-sub">Обязательное подтверждение соответствия для производителей и импортёров. Станки, компрессоры, насосы, конвейеры, подъёмное оборудование — оформим сертификат или декларацию в аккредитованном органе.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оставить заявку</button>
+        <button class="btn-ghost">Получить консультацию</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Бесплатная консультация</h3>
+      <div class="form-group"><label>Тип оборудования</label><input type="text" placeholder="Например: токарный станок"></div>
+      <div class="form-group"><label>Ваше имя</label><input type="text" placeholder="Иван Иванов"></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Получить консультацию</button>
+      <p class="form-note">Ответим в течение 30 минут в рабочее время</p>
+    </div>
+  </div>
+</div>
+
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">45 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">14 дней</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+    <div class="price-item"><div class="price-label">Форма подтверждения</div><div class="price-val">Сертификат / Декларация</div></div>
+  </div>
+</div>
+
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">Что регулирует ТР ТС 010/2011</h2>
+  <p class="section-text">Технический регламент Таможенного союза «О безопасности машин и оборудования» (ТР ТС 010/2011) устанавливает обязательные требования к машинам, оборудованию и их составным частям, предназначенным для выпуска в обращение на рынке ЕАЭС. Действие регламента распространяется на промышленное, горнодобывающее, перерабатывающее, строительное и иные виды оборудования.</p>
+  <div class="alert alert-blue"><div class="alert-icon">ℹ️</div><div><div class="alert-title">Важно для импортёров и производителей</div><div class="alert-text">Без сертификата или декларации соответствия ТР ТС 010/2011 реализация оборудования на территории ЕАЭС запрещена. Документ также необходим для таможенного оформления при ввозе.</div></div></div>
+  <p class="section-text"><strong>Под действие регламента НЕ подпадают:</strong> транспортные средства (автомобили, железнодорожный подвижной состав), воздушные суда, медицинские изделия, вооружение и военная техника, ядерные установки, оборудование для атомной энергетики.</p>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Перечень оборудования и тип обязательного документа</h2>
+  <p class="section-subtitle">Для большинства машин требуется сертификат, для части — декларация соответствия</p>
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Группа оборудования</th><th>Примеры</th><th>Тип документа</th></tr>
+    <tr><td>Металлообрабатывающее оборудование</td><td>Токарные, фрезерные, сверлильные, шлифовальные станки</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Компрессоры и насосы</td><td>Поршневые, винтовые компрессоры; центробежные, погружные насосы</td><td><span class="tag tag-both">Серт. или Декл.</span></td></tr>
+    <tr><td>Подъёмное оборудование</td><td>Тельферы, кран-балки, погрузчики (не ТС)</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Конвейеры и транспортёры</td><td>Ленточные, роликовые, цепные конвейеры</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Деревообрабатывающее оборудование</td><td>Пилы, фрезерные станки, рубительные машины</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Пищевое оборудование</td><td>Миксеры промышленные, упаковочные линии, слайсеры</td><td><span class="tag tag-decl">Декларация</span></td></tr>
+    <tr><td>Сварочное оборудование</td><td>Сварочные аппараты, плазморезы (промышленные)</td><td><span class="tag tag-both">Серт. или Декл.</span></td></tr>
+    <tr><td>Строительное оборудование</td><td>Бетономешалки, вибропрессы, дробилки</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+  </table>
+  </div>
+  <div class="schema-note"><strong>Примечание:</strong> Точный тип документа определяется кодом ТН ВЭД продукции и конкретной позицией в приложении к ТР ТС 010/2011. Для уточнения — обратитесь к нашим специалистам.</div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Схемы сертификации по ТР ТС 010/2011</h2>
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Схема</th><th>Кто заявитель</th><th>Испытания</th><th>Инспекционный контроль</th><th>Срок действия</th></tr>
+    <tr><td><strong>1С</strong></td><td>Изготовитель</td><td>В аккредитованной лаборатории</td><td>Ежегодно</td><td>3 года</td></tr>
+    <tr><td><strong>2С</strong></td><td>Изготовитель</td><td>В аккред. лаборатории + анализ производства</td><td>Ежегодно</td><td>5 лет</td></tr>
+    <tr><td><strong>3С</strong></td><td>Изготовитель / импортёр</td><td>В аккредитованной лаборатории</td><td>Не проводится</td><td>На партию</td></tr>
+    <tr><td><strong>4С</strong></td><td>Изготовитель / импортёр</td><td>В аккредитованной лаборатории</td><td>Не проводится</td><td>На единицу</td></tr>
+    <tr><td><strong>6С</strong></td><td>Изготовитель с сертиф. СМК</td><td>В лаборатории + оценка СМК</td><td>Ежегодно</td><td>5 лет</td></tr>
+    <tr><td><strong>7С</strong></td><td>Изготовитель</td><td>Испытания типа</td><td>Ежегодно</td><td>5 лет</td></tr>
+  </table>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Этапы получения сертификата ТР ТС 010/2011</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Анализ продукции и определение типа документа</div><div class="step-desc">Специалист проверяет код ТН ВЭД, тип оборудования и определяет — нужен сертификат или декларация, выбирает оптимальную схему.</div><div class="step-time">1–2 рабочих дня</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Подготовка документов и подача заявки в орган</div><div class="step-desc">Формируем комплект эксплуатационной документации, проверяем её на соответствие требованиям, подаём заявку в аккредитованный орган.</div><div class="step-time">2–5 дней</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Отбор образцов и проведение испытаний</div><div class="step-desc">Организуем доставку образцов в аккредитованную лабораторию. Испытания включают проверку механической безопасности, электробезопасности, устойчивости к воздействиям среды.</div><div class="step-time">10–20 рабочих дней</div></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">Анализ производства (для схем 2С, 6С)</div><div class="step-desc">Выезд эксперта органа по сертификации на производство для проверки системы контроля качества. При необходимости организуем переводчика.</div><div class="step-time">3–7 дней</div></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-title">Оформление и регистрация сертификата</div><div class="step-desc">Орган по сертификации оформляет сертификат и регистрирует его в едином реестре ФСА. Передаём документ и полный комплект приложений заказчику.</div><div class="step-time">2–3 дня</div></div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Необходимые документы</h2>
+  <div class="docs-grid">
+    <div class="docs-box">
+      <h4>🏭 Для российского производителя</h4>
+      <ul class="docs-list">
+        <li>Заявка на сертификацию</li>
+        <li>Регистрационные документы (ОГРН, ИНН, устав)</li>
+        <li>Технические условия или стандарт предприятия</li>
+        <li>Руководство по эксплуатации и техпаспорт</li>
+        <li>Сведения о производстве</li>
+        <li>Протоколы предварительных испытаний (при наличии)</li>
+        <li>Образцы продукции</li>
+      </ul>
+    </div>
+    <div class="docs-box">
+      <h4>🌍 Для импортёра</h4>
+      <ul class="docs-list">
+        <li>Заявка на сертификацию</li>
+        <li>Регистрационные документы заявителя (резидент ЕАЭС)</li>
+        <li>Контракт с иностранным производителем</li>
+        <li>Техническая документация на языке оригинала + перевод</li>
+        <li>Руководство по эксплуатации на русском языке</li>
+        <li>Каталог или описание продукции</li>
+        <li>Образцы (с временным ввозом или из стран ЕАЭС)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Ответственность за нарушение ТР ТС 010/2011</h2>
+  <div class="penalty-box">
+    <div class="penalty-title">⚠️ Штрафы по ст. 14.43 КоАП РФ (май 2026)</div>
+    <div class="penalty-grid">
+      <div class="penalty-item"><div class="penalty-role">Должностное лицо</div><div class="penalty-amt">20 000 – 30 000 ₽</div></div>
+      <div class="penalty-item"><div class="penalty-role">Индивидуальный предприниматель</div><div class="penalty-amt">30 000 – 40 000 ₽</div></div>
+      <div class="penalty-item"><div class="penalty-role">Юридическое лицо</div><div class="penalty-amt">300 000 – 600 000 ₽</div></div>
+    </div>
+    <p style="font-size:13px;color:#991b1b;margin-top:14px">При повторном нарушении — конфискация продукции, приостановление деятельности до 90 суток. При причинении вреда жизни или здоровью — уголовная ответственность по ст. 238 УК РФ.</p>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Частые ошибки при сертификации оборудования</h2>
+  <div class="mistakes-list">
+    <div class="mistake-item"><div class="mistake-title">Неверное определение области применения регламента</div><div class="mistake-text">Заявители путают ТР ТС 010 с ТР ТС 012 (взрывозащита) или ТР ТС 032 (давление). Оборудование может попадать под несколько регламентов одновременно.</div></div>
+    <div class="mistake-item"><div class="mistake-title">Отсутствие руководства по эксплуатации на русском языке</div><div class="mistake-text">Без качественного перевода эксплуатационной документации орган не выдаст сертификат. Машинный перевод не принимается.</div></div>
+    <div class="mistake-item"><div class="mistake-title">Неправильный выбор схемы сертификации</div><div class="mistake-text">Схема 1С для серийного производства не подходит для единичной поставки — это приводит к отказу в регистрации и потере времени.</div></div>
+    <div class="mistake-item"><div class="mistake-title">Заявитель не является резидентом ЕАЭС</div><div class="mistake-text">Иностранная компания не может быть заявителем. Сертификат оформляется на резидента ЕАЭС — российского импортёра или представителя производителя.</div></div>
+    <div class="mistake-item"><div class="mistake-title">Незаявленное изменение конструкции</div><div class="mistake-text">Любое существенное изменение в конструкции оборудования после получения сертификата требует переоформления документа. Продажа изменённой конструкции по старому сертификату — нарушение.</div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат или достаточно декларации ТР ТС 010?<span class="faq-arrow">▾</span></div><div class="faq-a">Это зависит от конкретного типа оборудования. Большинство машин (станки, конвейеры, подъёмное оборудование, компрессоры) подлежат обязательной сертификации. Декларирование допускается для отдельных категорий, перечисленных в приложениях к регламенту — в частности, для ряда позиций пищевого и сельскохозяйственного оборудования. Точный ответ можно дать только после анализа кода ТН ВЭД и описания продукции.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли ТР ТС 020 дополнительно к 010?<span class="faq-arrow">▾</span></div><div class="faq-a">Да, если оборудование является электрическим или содержит электрические компоненты. ТР ТС 020/2011 (электромагнитная совместимость) действует параллельно с 010/2011. Большинство станков, компрессоров и промышленного оборудования с электроприводом требуют документов по обоим регламентам.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Что такое технический паспорт по ТР ТС 010 и обязателен ли он?<span class="faq-arrow">▾</span></div><div class="faq-a">Да, обязателен. ТР ТС 010/2011 требует, чтобы каждая машина поставлялась с руководством по эксплуатации и техническим паспортом на русском языке. В паспорте указываются технические характеристики, условия эксплуатации, сведения об изготовителе и информация о проведённой сертификации (номер сертификата, орган).</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Как сертифицировать единичный станок, ввозимый под заказ?<span class="faq-arrow">▾</span></div><div class="faq-a">Для единичного изделия применяется схема 4С — сертификат выдаётся на конкретную единицу оборудования, идентифицированную серийным номером. Испытания проводятся на самом изделии или его конструктивно идентичном аналоге. Срок действия такого сертификата не ограничен датой, но привязан к конкретному изделию.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат на запасные части к оборудованию?<span class="faq-arrow">▾</span></div><div class="faq-a">Запасные части, не являющиеся самостоятельными машинами (подшипники, ремни, фильтры, электрические компоненты), как правило, не требуют сертификации по ТР ТС 010. Однако они могут попадать под другие технические регламенты — например, ТР ТС 004 (НВО) или ТР ТС 020 (ЭМС). Составные части машин, способные функционировать самостоятельно, могут требовать отдельного документа.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Каков срок действия сертификата ТР ТС 010/2011?<span class="faq-arrow">▾</span></div><div class="faq-a">Зависит от схемы сертификации: схема 1С — 3 года, схемы 2С, 6С, 7С — до 5 лет. Для партии (3С) — на конкретную партию без ограничения срока, для единицы (4С) — бессрочный на конкретное изделие. При сертификации серийного производства требуется ежегодный инспекционный контроль.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Каковы штрафы за отсутствие сертификата ТР ТС 010?<span class="faq-arrow">▾</span></div><div class="faq-a">По статье 14.43 КоАП РФ: должностные лица — 20 000–30 000 руб., ИП — 30 000–40 000 руб., юридические лица — 300 000–600 000 руб. При повторном нарушении продукция конфискуется, деятельность может быть приостановлена на срок до 90 суток. Если нарушение повлекло вред здоровью — уголовная ответственность.</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Готовы оформить сертификат ТР ТС 010/2011?</h3>
+    <p>Бесплатно определим тип документа, схему сертификации и сроки для вашего оборудования</p>
+  </div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <div class="cta-email">mail@certifyco.ru · Пн–Пт 9:00–18:00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Смотрите также</h2>
+  <div class="related-grid">
+    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС — общая страница</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 020/2011 (ЭМС)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 012/2011 (взрывозащита)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 032/2013 (давление)</div><div class="related-arrow">›</div></a>
+  </div>
+</div>
+
+</div><!-- /content -->
+</div><!-- /p010 -->
+
+<!-- ===== PAGE: ТР ТС 012/2011 ===== -->
+<div class="page-view" id="p012">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 012/2011</span>
+</div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ Взрывозащищённое оборудование</div>
+        <div class="badge">Ex-маркировка</div>
+      </div>
+      <h1>Сертификат ТР ТС 012/2011 на взрывозащищённое оборудование</h1>
+      <p class="hero-sub">Обязательный документ для оборудования, предназначенного для работы во взрывоопасных средах. Нефтяная, газовая, горнодобывающая и химическая промышленность.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оставить заявку</button>
+        <button class="btn-ghost">Бесплатная консультация</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Определить схему сертификации</h3>
+      <div class="form-group"><label>Тип оборудования</label><input type="text" placeholder="Электродвигатель, датчик, светильник..."></div>
+      <div class="form-group"><label>Уровень взрывозащиты</label><input type="text" placeholder="Ga, Gb, Gc, Da, Db, Dc"></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Получить консультацию</button>
+      <p class="form-note">Ответим в течение 30 минут</p>
+    </div>
+  </div>
+</div>
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">60 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">21 день</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+    <div class="price-item"><div class="price-label">Только</div><div class="price-val">Сертификат</div></div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">О чём ТР ТС 012/2011</h2>
+  <p class="section-text">Технический регламент «О безопасности оборудования для работы во взрывоопасных средах» (ТР ТС 012/2011) устанавливает требования ко всем видам оборудования, эксплуатируемого в зонах с взрывоопасной концентрацией горючих газов, паров, пыли или волокон. Регламент полностью охватывает нефтегазовую, химическую, горнодобывающую отрасли и деревообработку.</p>
+  <div class="alert alert-orange">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <div class="alert-title">Только сертификация — декларирование не допускается</div>
+      <div class="alert-text">В отличие от большинства ТР ТС, регламент 012/2011 не предусматривает форму декларирования соответствия. Единственный допустимый документ — сертификат, выданный аккредитованным органом по сертификации.</div>
+    </div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Схемы сертификации по ТР ТС 012/2011</h2>
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Схема</th><th>Область применения</th><th>Инспекционный контроль</th><th>Срок</th></tr>
+    <tr><td><strong>1С</strong></td><td>Серийное производство (российский изготовитель)</td><td>Ежегодно</td><td>3 года</td></tr>
+    <tr><td><strong>3С</strong></td><td>Партия (импорт, разовая поставка)</td><td>Не проводится</td><td>На партию</td></tr>
+    <tr><td><strong>4С</strong></td><td>Единичное изделие</td><td>Не проводится</td><td>Бессрочно на изделие</td></tr>
+    <tr><td><strong>9С</strong></td><td>Единичный образец (выставки, испытания)</td><td>Не проводится</td><td>На образец</td></tr>
+  </table>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Маркировка взрывозащищённого оборудования</h2>
+  <p class="section-text">После получения сертификата ТР ТС 012/2011 на каждую единицу оборудования наносится маркировка взрывозащиты. Она содержит:</p>
+  <div class="three-col">
+    <div class="adv-card"><div class="adv-icon">⚡</div><div class="adv-title">Знак Ex</div><div class="adv-text">Международный символ взрывозащиты, означающий соответствие требованиям безопасности для взрывоопасных сред</div></div>
+    <div class="adv-card"><div class="adv-icon">🔒</div><div class="adv-title">Уровень защиты</div><div class="adv-text">Ga/Gb/Gc — для газовых зон (0, 1, 2). Da/Db/Dc — для пылевых зон. Определяет применимость в конкретных условиях</div></div>
+    <div class="adv-card"><div class="adv-icon">🏷️</div><div class="adv-title">Знак ЕАЭС + номер сертификата</div><div class="adv-text">Единый знак обращения на рынке ЕАЭС подтверждает прохождение сертификации по всем применимым регламентам</div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Этапы получения сертификата</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Определение уровня взрывозащиты и схемы сертификации</div><div class="step-desc">Анализируем зону применения оборудования (газ/пыль), уровень защиты Ex и подбираем оптимальную схему.</div><div class="step-time">1–2 дня</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Подготовка технической документации</div><div class="step-desc">Формируем технический файл: чертежи, ТУ, результаты внутренних испытаний, описание мер взрывозащиты.</div><div class="step-time">3–7 дней</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Испытания в аккредитованной лаборатории</div><div class="step-desc">Проверка всех требований взрывозащиты согласно ГОСТ IEC серий 60079 и 61241, анализ температурных классов, групп газов.</div><div class="step-time">15–25 рабочих дней</div></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">Анализ производства (для схемы 1С)</div><div class="step-desc">Выезд эксперта на производство, проверка системы входного и выходного контроля взрывозащищённого оборудования.</div><div class="step-time">3–5 дней</div></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-title">Регистрация сертификата в реестре ФСА</div><div class="step-desc">Орган оформляет и регистрирует сертификат, передаём полный пакет документов заказчику.</div><div class="step-time">2–3 дня</div></div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Возможно ли декларирование вместо сертификации по ТР ТС 012?<span class="faq-arrow">▾</span></div><div class="faq-a">Нет. ТР ТС 012/2011 не допускает форму декларации соответствия. Единственная форма обязательного подтверждения — сертификат соответствия, выданный аккредитованным органом по сертификации в области взрывозащиты.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Чем отличаются уровни взрывозащиты Ga, Gb, Gc?<span class="faq-arrow">▾</span></div><div class="faq-a">Уровни относятся к оборудованию для газовых взрывоопасных зон: Ga — зона 0 (взрывоопасная смесь присутствует постоянно), Gb — зона 1 (периодически), Gc — зона 2 (редко и кратковременно). Чем выше уровень защиты, тем более жёсткие требования предъявляются к конструкции оборудования.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат 012 для взрывозащищённых светильников?<span class="faq-arrow">▾</span></div><div class="faq-a">Да. Взрывозащищённые светильники, независимо от типа (LED или традиционные), подпадают под действие ТР ТС 012/2011 и требуют обязательной сертификации. Дополнительно может потребоваться документ по ТР ТС 020 (ЭМС).</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Как правильно нанести маркировку Ex после сертификации?<span class="faq-arrow">▾</span></div><div class="faq-a">Маркировка должна содержать: знак Ex в ромбе, вид взрывозащиты, группу (подгруппу) оборудования, температурный класс или максимальную поверхностную температуру, уровень взрывозащиты оборудования, номер сертификата ТР ТС. Маркировка наносится стойким способом (гравировка, несмываемая краска, таблички) на видном месте.</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div><h3>Оформить сертификат ТР ТС 012/2011</h3><p>Специализируемся на взрывозащищённом оборудовании. Знаем все нюансы.</p></div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+</div>
+</div><!-- /p012 -->
+
+<!-- ===== PAGE: ТР ТС 019/2011 ===== -->
+<div class="page-view" id="p019">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 019/2011</span>
+</div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ СИЗ</div>
+        <div class="badge">Защитная одежда и снаряжение</div>
+      </div>
+      <h1>Сертификат ТР ТС 019/2011 на средства индивидуальной защиты (СИЗ)</h1>
+      <p class="hero-sub">Обязательная сертификация защитной одежды, касок, очков, перчаток, респираторов и другого снаряжения для охраны труда. Определим класс СИЗ и оформим нужный документ.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оставить заявку</button>
+        <button class="btn-ghost">Консультация бесплатно</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Определить тип документа</h3>
+      <div class="form-group"><label>Тип СИЗ</label><input type="text" placeholder="Каска, перчатки, респиратор..."></div>
+      <div class="form-group"><label>Производитель</label><input type="text" placeholder="Страна производства"></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Получить консультацию</button>
+      <p class="form-note">Бесплатная консультация</p>
+    </div>
+  </div>
+</div>
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">35 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">10 дней</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">Классификация СИЗ: сертификат или декларация?</h2>
+  <p class="section-text">ТР ТС 019/2011 разделяет все СИЗ на три класса в зависимости от защищаемых рисков. Класс определяет, какой документ необходим.</p>
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Класс СИЗ</th><th>Защита от</th><th>Примеры</th><th>Документ</th></tr>
+    <tr><td><strong>Класс 1</strong> (простые)</td><td>Минимальные риски, поверхностные травмы</td><td>Садовые перчатки, лёгкие нарукавники</td><td><span class="tag tag-decl">Декларация</span></td></tr>
+    <tr><td><strong>Класс 2</strong> (сложные)</td><td>Значительные риски: химия, огонь, электричество</td><td>Защитные очки, костюм сварщика, диэлектрические перчатки</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td><strong>Класс 3</strong> (смертельные риски)</td><td>Риски гибели или необратимого вреда здоровью</td><td>Каски, страховочные системы, ДАСВ, противогазы</td><td><span class="tag tag-cert">Сертификат (обязательно)</span></td></tr>
+  </table>
+  </div>
+  <div class="alert alert-blue">
+    <div class="alert-icon">ℹ️</div>
+    <div><div class="alert-title">СИЗ класса 3 — только аккредитованный орган</div><div class="alert-text">Сертификация средств защиты от смертельных рисков (страховочные привязи, защитные каски, изолирующие противогазы) может проводиться только органом, имеющим специальную область аккредитации. Декларация по собственным доказательствам не допускается.</div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Этапы оформления сертификата ТР ТС 019/2011</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Классификация СИЗ и выбор схемы</div><div class="step-desc">Определяем класс, тип защиты и схему сертификации исходя из типа СИЗ и производителя.</div><div class="step-time">1 день</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Испытания в аккредитованной лаборатории</div><div class="step-desc">Механические, термические, химические, климатические испытания согласно ГОСТ Р и международным стандартам серии EN.</div><div class="step-time">7–15 дней</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Оформление и регистрация сертификата</div><div class="step-desc">Сертификат регистрируется в реестре ФСА и вступает в силу с даты регистрации.</div><div class="step-time">2–3 дня</div></div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Могут ли работодатели использовать СИЗ без сертификата?<span class="faq-arrow">▾</span></div><div class="faq-a">Нет. Согласно Трудовому кодексу РФ, работодатель обязан обеспечивать работников только сертифицированными СИЗ. Использование СИЗ без действующего сертификата (декларации) является нарушением требований охраны труда и влечёт административную ответственность.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли новый сертификат при изменении конструкции СИЗ?<span class="faq-arrow">▾</span></div><div class="faq-a">Да, любое существенное изменение конструкции, материалов или защитных свойств СИЗ требует переоформления сертификата. Незначительные изменения (цвет, отделка, не влияющие на защитные свойства) могут быть внесены как модификация с уведомлением органа.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат на специальную одежду для пищевых производств?<span class="faq-arrow">▾</span></div><div class="faq-a">Специальная одежда для пищевых производств, обеспечивающая защиту работника, подпадает под ТР ТС 019/2011. Если одежда выполняет исключительно гигиеническую функцию (форменная одежда персонала без защитных свойств), она может регулироваться иными регламентами. Точный ответ зависит от назначения изделия.</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div><h3>Оформить документы на СИЗ</h3><p>Бесплатно определим класс СИЗ и нужный тип документа</p></div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+</div>
+</div><!-- /p019 -->
+
+<!-- ===== PAGE: ТР ТС 004/2011 ===== -->
+<div class="page-view" id="p004">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 004/2011</span>
+</div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ НВО до 1000 В</div>
+        <div class="badge">Электрооборудование</div>
+      </div>
+      <h1>Сертификат ТР ТС 004/2011 на низковольтное оборудование</h1>
+      <p class="hero-sub">Обязательная сертификация электрооборудования с номинальным напряжением от 50 до 1000 В переменного тока и от 75 до 1500 В постоянного тока. Бытовая и промышленная электроника, кабели, источники питания.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оставить заявку</button>
+        <button class="btn-ghost">Бесплатная консультация</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Получить консультацию</h3>
+      <div class="form-group"><label>Тип продукции</label><input type="text" placeholder="Блок питания, удлинитель, ИБП..."></div>
+      <div class="form-group"><label>Страна производства</label><input type="text" placeholder="Китай, Россия, Германия..."></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Получить консультацию</button>
+    </div>
+  </div>
+</div>
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">40 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">14 дней</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">Область применения ТР ТС 004/2011</h2>
+  <p class="section-text">Регламент охватывает всё электрооборудование с рабочим напряжением 50–1000 В (переменный ток) или 75–1500 В (постоянный ток), предназначенное для реализации на рынке ЕАЭС. Под действие регламента подпадают как бытовые приборы, так и профессиональное промышленное оборудование.</p>
+
+  <div class="important"><strong>Важно:</strong> Большинство электрооборудования требует документов сразу по двум регламентам — ТР ТС 004/2011 (безопасность НВО) и ТР ТС 020/2011 (электромагнитная совместимость). Оба документа оформляются параллельно и могут быть объединены в один при декларировании.</div>
+
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Группа продукции</th><th>Примеры</th><th>Тип документа</th></tr>
+    <tr><td>Бытовые электроприборы</td><td>Холодильники, стиральные машины, пылесосы, утюги, миксеры</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Инструменты электрические</td><td>Дрели, шуруповёрты, болгарки (бытовые)</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Источники питания</td><td>Блоки питания, зарядные устройства, ИБП, инверторы</td><td><span class="tag tag-both">Серт. или Декл.</span></td></tr>
+    <tr><td>Удлинители и розетки</td><td>Сетевые удлинители, розетки, выключатели</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td>Промышленное НВО</td><td>Частотные преобразователи, ПЛК, контакторы</td><td><span class="tag tag-decl">Декларация</span></td></tr>
+    <tr><td>Кабели и провода</td><td>Силовые кабели, монтажные провода (в части 004)</td><td><span class="tag tag-both">Серт. или Декл.</span></td></tr>
+  </table>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Этапы получения сертификата ТР ТС 004/2011</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Анализ продукции, определение схемы и применимых стандартов</div><div class="step-desc">Проверяем ГОСТ IEC 60335, 61558, 60950 и другие стандарты, применимые к конкретному типу продукции. Определяем схему — сертификат или декларация.</div><div class="step-time">1–2 дня</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Испытания на электробезопасность</div><div class="step-desc">Проверка изоляции, нагрева, токов утечки, механической прочности, стойкости к воспламенению, сопротивления изоляции.</div><div class="step-time">10–20 дней</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Оформление и регистрация сертификата</div><div class="step-desc">Орган по сертификации оформляет сертификат, регистрирует в реестре ФСА. Передаём заказчику.</div><div class="step-time">2–3 дня</div></div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли ТР ТС 020 дополнительно к ТР ТС 004?<span class="faq-arrow">▾</span></div><div class="faq-a">Да, в большинстве случаев. ТР ТС 004 регулирует электробезопасность НВО, ТР ТС 020 — электромагнитную совместимость. Для бытовой техники, инструментов, блоков питания и большинства промышленного электрооборудования нужны оба документа. При декларировании их можно объединить в одном документе 004+020.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат на компоненты (трансформаторы, конденсаторы)?<span class="faq-arrow">▾</span></div><div class="faq-a">Конструктивные компоненты (трансформаторы, конденсаторы, микросхемы), не предназначенные для самостоятельной реализации конечному потребителю, как правило, не требуют самостоятельного сертификата по ТР ТС 004. Однако силовые трансформаторы и ряд других компонентов могут иметь свой статус — уточняйте по конкретной позиции ТН ВЭД.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужна ли декларация при продаже НВО через маркетплейсы?<span class="faq-arrow">▾</span></div><div class="faq-a">Да. Маркетплейсы (Wildberries, Ozon, Яндекс.Маркет) требуют наличия актуальных разрешительных документов для электрооборудования. При отсутствии сертификата или декларации в листинге карточка товара может быть заблокирована.</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div><h3>Оформить сертификат на низковольтное оборудование</h3><p>Проконсультируем по 004 и 020 одновременно</p></div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+</div>
+</div><!-- /p004 -->
+
+<!-- ===== PAGE: Декларация 004/020 ===== -->
+<div class="page-view" id="p004020">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Декларация ТР ТС 004/020</span>
+</div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ Два регламента — один документ</div>
+        <div class="badge">НВО + ЭМС</div>
+      </div>
+      <h1>Декларация соответствия ТР ТС 004/2011 и 020/2011</h1>
+      <p class="hero-sub">Совмещённая декларация на низковольтное оборудование по двум техническим регламентам. Один документ вместо двух — для тех категорий НВО, где допускается декларирование.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оформить декларацию</button>
+        <button class="btn-ghost">Консультация</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Проверить возможность декларирования</h3>
+      <div class="form-group"><label>Тип оборудования</label><input type="text" placeholder="Частотный преобразователь, ПЛК..."></div>
+      <div class="form-group"><label>Код ТН ВЭД</label><input type="text" placeholder="8504, 8537, 8543..."></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Узнать стоимость</button>
+    </div>
+  </div>
+</div>
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">25 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">5 дней</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">Зачем нужна декларация вместо сертификата</h2>
+  <p class="section-text">Для части номенклатуры низковольтного оборудования технический регламент ТР ТС 004/2011 допускает декларирование соответствия вместо сертификации. При этом декларация имеет равную юридическую силу с сертификатом, но оформляется от имени заявителя — производителя или импортёра.</p>
+  <div class="alert alert-blue">
+    <div class="alert-icon">💡</div>
+    <div><div class="alert-title">Совмещённая декларация 004 + 020</div><div class="alert-text">Если продукция подпадает под оба регламента — 004 (электробезопасность) и 020 (ЭМС) — можно оформить один документ, покрывающий требования обоих ТР ТС. Это экономит время и снижает административную нагрузку.</div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Схемы декларирования</h2>
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Схема</th><th>Доказательная база</th><th>Кто может применять</th><th>Срок</th></tr>
+    <tr><td><strong>1Д</strong></td><td>Собственные доказательства + протоколы испытаний</td><td>Изготовитель</td><td>До 5 лет</td></tr>
+    <tr><td><strong>2Д</strong></td><td>Протоколы аккредитованной лаборатории</td><td>Изготовитель / импортёр</td><td>До 5 лет</td></tr>
+    <tr><td><strong>3Д</strong></td><td>Протоколы лаб. + сертификат СМК</td><td>Изготовитель</td><td>До 5 лет</td></tr>
+    <tr><td><strong>6Д</strong></td><td>Протоколы лаб. + сертификат системы качества</td><td>Изготовитель / импортёр</td><td>До 5 лет</td></tr>
+  </table>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Можно ли оформить декларацию по собственным доказательствам без лаборатории?<span class="faq-arrow">▾</span></div><div class="faq-a">Только по схеме 1Д — изготовитель вправе использовать собственную доказательную базу. Однако собственные доказательства должны включать результаты испытаний, которые можно подтвердить, и полный технический файл. Для импортёров схема 1Д недоступна — требуется протокол аккредитованной лаборатории.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Как проверить подлинность декларации в реестре?<span class="faq-arrow">▾</span></div><div class="faq-a">Декларации ТР ТС регистрируются в Едином реестре на сайте ФСА (fsa.gov.ru). Проверить подлинность можно по регистрационному номеру, который указан в документе. Декларации, не внесённые в реестр, юридической силы не имеют.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Кто несёт ответственность при декларировании?<span class="faq-arrow">▾</span></div><div class="faq-a">При декларировании вся полнота юридической ответственности лежит на заявителе — производителе или импортёре, подписавшем декларацию. В случае выявления несоответствия продукции заявленным требованиям ответственность несёт заявитель, а не орган по сертификации.</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div><h3>Оформить декларацию 004/020</h3><p>Быстро и правильно — от 5 рабочих дней</p></div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+</div>
+</div><!-- /p004020 -->
+
+<!-- ===== PAGE: ТР ТС 020/2011 ===== -->
+<div class="page-view" id="p020">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 020/2011</span>
+</div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ Электромагнитная совместимость</div>
+        <div class="badge">ЭМС / EMC</div>
+      </div>
+      <h1>Сертификат ТР ТС 020/2011 — электромагнитная совместимость (ЭМС)</h1>
+      <p class="hero-sub">Обязательное подтверждение соответствия требованиям к помехоэмиссии и помехоустойчивости для электрооборудования на рынке ЕАЭС. Бытовая техника, промышленное оборудование, LED-светильники, ИТ-оборудование.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оставить заявку</button>
+        <button class="btn-ghost">Консультация</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Получить консультацию</h3>
+      <div class="form-group"><label>Тип оборудования</label><input type="text" placeholder="Светильник, бытовой прибор, ПЧ..."></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Узнать стоимость</button>
+    </div>
+  </div>
+</div>
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">35 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">12 дней</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">Что такое ЭМС и зачем нужен ТР ТС 020/2011</h2>
+  <p class="section-text">Электромагнитная совместимость (ЭМС) — способность оборудования нормально функционировать в условиях электромагнитных помех, не создавая при этом недопустимых помех для другого оборудования. ТР ТС 020/2011 устанавливает обязательные требования по двум направлениям: ограничение помехоэмиссии (оборудование не должно излучать сверх нормы) и помехоустойчивость (оборудование должно работать при воздействии помех).</p>
+  <div class="important"><strong>Нужен ли ТР ТС 020 вместе с 004?</strong> Да, в большинстве случаев. ТР ТС 004 регулирует электробезопасность, ТР ТС 020 — ЭМС. Для большинства бытовых приборов, инструментов, источников питания и промышленного оборудования необходимы оба документа. Они могут быть оформлены как два отдельных документа или как совмещённая декларация 004+020.</div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Что проверяется при испытаниях ЭМС</h2>
+  <div class="two-col">
+    <div>
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--gray-900)">Помехоэмиссия (излучение)</h3>
+      <ul class="docs-list" style="list-style:none">
+        <li>Кондуктивные помехи в цепи питания</li>
+        <li>Излучаемые радиочастотные помехи</li>
+        <li>Гармоники тока</li>
+        <li>Колебания и провалы напряжения</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--gray-900)">Помехоустойчивость</h3>
+      <ul class="docs-list" style="list-style:none">
+        <li>Электростатический разряд (ESD)</li>
+        <li>Радиочастотные поля</li>
+        <li>Электрический быстрый переходный процесс</li>
+        <li>Импульсная помеха (Surge)</li>
+        <li>Провалы и прерывания напряжения</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли ТР ТС 020 на LED-светильники?<span class="faq-arrow">▾</span></div><div class="faq-a">Да. LED-светильники являются источниками электромагнитных помех (импульсные источники питания, драйверы) и подпадают под действие ТР ТС 020/2011. Дополнительно светильники могут требовать документов по ТР ТС 004/2011 (если напряжение питания входит в область применения). Оба документа необходимы для выхода на рынок ЕАЭС и размещения на маркетплейсах.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Чем отличаются класс A и класс B по ЭМС?<span class="faq-arrow">▾</span></div><div class="faq-a">Класс B — более жёсткие требования, предназначен для бытового применения (жилые дома, офисы). Класс A — промышленное применение, нормы помехоэмиссии несколько мягче, но при применении в жилых зонах может нарушаться работа бытовых приборов и радиоэлектронных средств. Большинство потребительских товаров должны соответствовать классу B.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Как долго действует сертификат ТР ТС 020?<span class="faq-arrow">▾</span></div><div class="faq-a">Срок зависит от схемы: для серийного производства — 3 или 5 лет с обязательным ежегодным инспекционным контролем, для партии — на конкретную партию без ограничения срока.</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div><h3>Оформить сертификат ТР ТС 020/2011</h3><p>Испытания ЭМС в аккредитованной лаборатории</p></div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+</div>
+</div><!-- /p020 -->
+
+<!-- ===== PAGE: ТР ТС 032/2013 ===== -->
+<div class="page-view" id="p032">
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 032/2013</span>
+</div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="badge badge-green">✓ Сосуды и котлы</div>
+        <div class="badge">Давление свыше 0,05 МПа</div>
+      </div>
+      <h1>Сертификат ТР ТС 032/2013 на оборудование под избыточным давлением</h1>
+      <p class="hero-sub">Обязательная сертификация сосудов, котлов, трубопроводов, баллонов и теплообменников. Объясним разницу между ТР ТС 032 и экспертизой промышленной безопасности Ростехнадзора.</p>
+      <div class="hero-cta-wrap">
+        <button class="btn-primary">Оставить заявку</button>
+        <button class="btn-ghost">Бесплатная консультация</button>
+      </div>
+    </div>
+    <div class="hero-form">
+      <h3>Консультация по сертификации</h3>
+      <div class="form-group"><label>Тип оборудования</label><input type="text" placeholder="Сосуд, котёл, трубопровод..."></div>
+      <div class="form-group"><label>Давление (МПа)</label><input type="text" placeholder="0,07 МПа / 1,6 МПа..."></div>
+      <div class="form-group"><label>Телефон</label><input type="text" placeholder="+7 (___) ___-__-__"></div>
+      <button class="form-submit">Получить консультацию</button>
+    </div>
+  </div>
+</div>
+<div class="price-strip">
+  <div class="price-strip-inner">
+    <div class="price-item"><div class="price-label">Стоимость от</div><div class="price-val">55 000 ₽</div></div>
+    <div class="price-item"><div class="price-label">Срок от</div><div class="price-val">20 дней</div></div>
+    <div class="price-item"><div class="price-label">Срок действия</div><div class="price-val">до 5 лет</div></div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-section">
+  <h2 class="section-title">ТР ТС 032 и экспертиза промбезопасности — это разные документы</h2>
+  <div class="alert alert-orange">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <div class="alert-title">Частая ошибка: путаница между ТР ТС 032 и ЭПБ Ростехнадзора</div>
+      <div class="alert-text">ТР ТС 032/2013 — документ для выхода продукции на рынок ЕАЭС (обязателен при производстве и импорте). Экспертиза промышленной безопасности (ЭПБ) — требование Ростехнадзора для эксплуатации объектов повышенной опасности. Оба документа могут требоваться одновременно, но решают разные задачи.</div>
+    </div>
+  </div>
+  <div style="overflow-x:auto;margin-top:20px">
+  <table class="data-table">
+    <tr><th>Параметр</th><th>ТР ТС 032/2013</th><th>ЭПБ Ростехнадзора</th></tr>
+    <tr><td>Цель</td><td>Допуск продукции на рынок ЕАЭС</td><td>Разрешение на эксплуатацию ОПО</td></tr>
+    <tr><td>Кто выдаёт</td><td>Аккредитованный орган по сертификации</td><td>Экспертная организация + Ростехнадзор</td></tr>
+    <tr><td>Когда нужен</td><td>До реализации продукции</td><td>После установки/ввода в эксплуатацию</td></tr>
+    <tr><td>Регулируется</td><td>ТР ТС 032/2013 (ЕАЭС)</td><td>ФЗ № 116-ФЗ «О промышленной безопасности»</td></tr>
+  </table>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Категории оборудования и тип документа</h2>
+  <p class="section-text">ТР ТС 032/2013 разделяет оборудование на категории (I–IV) в зависимости от параметров давления, температуры, объёма и рабочей среды. Категория определяет форму подтверждения соответствия.</p>
+  <div style="overflow-x:auto">
+  <table class="data-table">
+    <tr><th>Категория</th><th>Параметры</th><th>Примеры</th><th>Документ</th></tr>
+    <tr><td><strong>I</strong></td><td>Минимальный риск (невысокое давление, инертные среды)</td><td>Сосуды технической воды, охладители</td><td><span class="tag tag-decl">Декларация</span></td></tr>
+    <tr><td><strong>II</strong></td><td>Средний риск</td><td>Ресиверы, теплообменники</td><td><span class="tag tag-decl">Декларация</span></td></tr>
+    <tr><td><strong>III</strong></td><td>Высокий риск</td><td>Паровые котлы до 0,07 МПа, баллоны</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+    <tr><td><strong>IV</strong></td><td>Максимальный риск (высокое давление, опасные среды)</td><td>Котлы паровые, сосуды с токсичными газами</td><td><span class="tag tag-cert">Сертификат</span></td></tr>
+  </table>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Этапы получения сертификата ТР ТС 032/2013</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Определение категории и схемы сертификации</div><div class="step-desc">Анализируем параметры оборудования (давление, температура, объём, среда). Определяем категорию по ТР ТС 032 и тип документа.</div><div class="step-time">1–2 дня</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Испытания оборудования</div><div class="step-desc">Гидравлические испытания давлением, неразрушающий контроль сварных швов, расчёт на прочность, проверка арматуры, испытание предохранительных клапанов.</div><div class="step-time">15–30 дней</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Анализ производства (при серийной схеме)</div><div class="step-desc">Выезд эксперта для проверки технологических процессов сварки, контроля качества металла и систем технического контроля.</div><div class="step-time">3–7 дней</div></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">Оформление и регистрация сертификата</div><div class="step-desc">Регистрация в реестре ФСА, выдача полного комплекта документации заказчику.</div><div class="step-time">2–3 дня</div></div></div>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Ответственность за нарушение ТР ТС 032/2013</h2>
+  <div class="penalty-box">
+    <div class="penalty-title">⚠️ Штрафы по ст. 14.43 КоАП РФ</div>
+    <div class="penalty-grid">
+      <div class="penalty-item"><div class="penalty-role">Должностное лицо</div><div class="penalty-amt">20 000 – 30 000 ₽</div></div>
+      <div class="penalty-item"><div class="penalty-role">ИП</div><div class="penalty-amt">30 000 – 40 000 ₽</div></div>
+      <div class="penalty-item"><div class="penalty-role">Юридическое лицо</div><div class="penalty-amt">300 000 – 600 000 ₽</div></div>
+    </div>
+    <p style="font-size:13px;color:#991b1b;margin-top:14px">Реализация оборудования под давлением без сертификата или с нарушениями — основание для конфискации партии и запрета на оборот. При авариях — уголовная ответственность.</p>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">При каком минимальном давлении нужен сертификат ТР ТС 032?<span class="faq-arrow">▾</span></div><div class="faq-a">Действие ТР ТС 032/2013 распространяется на оборудование с рабочим давлением свыше 0,05 МПа (0,5 бар). Оборудование с давлением ниже этого порога под регламент не подпадает и в сертификации по ТР ТС 032 не нуждается.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат ТР ТС 032 на баллоны?<span class="faq-arrow">▾</span></div><div class="faq-a">Да. Баллоны для сжатых, сжиженных и растворённых газов подпадают под действие ТР ТС 032/2013. При этом баллоны входят в категорию высокого или максимального риска и требуют обязательной сертификации, а не декларирования.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли сертификат 032 на бытовые бойлеры?<span class="faq-arrow">▾</span></div><div class="faq-a">Накопительные водонагреватели (бойлеры) с рабочим давлением воды свыше 0,05 МПа подпадают под ТР ТС 032/2013. Большинство бытовых бойлеров также попадает под ТР ТС 004 (НВО). Оба документа необходимы для реализации. Бойлеры косвенного нагрева — аналогично.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Нужен ли ТР ТС 032 дополнительно к ТР ТС 010 для оборудования с давлением?<span class="faq-arrow">▾</span></div><div class="faq-a">Да, если оборудование является машиной (попадает под ТР ТС 010) и содержит элементы под давлением (попадает под ТР ТС 032), необходимы документы по обоим регламентам. Типичный пример: компрессор — документы по ТР ТС 010 (как машина) и по ТР ТС 032 (ресивер, если давление свыше 0,05 МПа).</div></div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div><h3>Оформить сертификат ТР ТС 032/2013</h3><p>Сосуды, котлы, трубопроводы, баллоны — знаем все нюансы</p></div>
+  <div class="cta-actions">
+    <div class="cta-phone">+7 (495) 248-38-00</div>
+    <button class="btn-primary" style="width:100%">Оставить заявку</button>
+  </div>
+</div>
+
+<div class="content" style="padding-bottom:0">
+<div class="page-section">
+  <h2 class="section-title">Смотрите также</h2>
+  <div class="related-grid">
+    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 010/2011 (машины и оборудование)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 012/2011 (взрывозащита)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="#"><div class="related-link-text">Декларация ТР ТС</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="#"><div class="related-link-text">Отказное письмо</div><div class="related-arrow">›</div></a>
+  </div>
+</div>
+</div>
+
+</div>
+</div><!-- /p032 -->
+
+<!-- SITE FOOTER -->
+<div class="site-footer">
+  <div class="site-footer-inner">
+    <div>© 2026 Сертифико · ИП Харитонов Владислав Николаевич</div>
+    <div>+7 (495) 248-38-00 · mail@certifyco.ru</div>
+    <div><a href="#">Политика конфиденциальности</a></div>
+  </div>
+</div>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page-view').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleFaq(el){
+  var item=el.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>
