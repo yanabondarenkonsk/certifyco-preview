@@ -207,13 +207,13 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <div class="nav-switcher">
   <div class="nav-switcher-inner">
     <span class="nav-label">Превью страниц:</span>
-    <button class="nav-btn active" onclick="showPage('p010')">ТР ТС 010/2011</button>
-    <button class="nav-btn" onclick="showPage('p012')">ТР ТС 012/2011</button>
-    <button class="nav-btn" onclick="showPage('p019')">ТР ТС 019/2011</button>
-    <button class="nav-btn" onclick="showPage('p004')">ТР ТС 004/2011</button>
-    <button class="nav-btn" onclick="showPage('p004020')">Декл. 004/020</button>
-    <button class="nav-btn" onclick="showPage('p020')">ТР ТС 020/2011</button>
-    <button class="nav-btn" onclick="showPage('p032')">ТР ТС 032/2013</button>
+    <button class="nav-btn active" onclick="showPage('p010',event)">ТР ТС 010/2011</button>
+    <button class="nav-btn" onclick="showPage('p012',event)">ТР ТС 012/2011</button>
+    <button class="nav-btn" onclick="showPage('p019',event)">ТР ТС 019/2011</button>
+    <button class="nav-btn" onclick="showPage('p004',event)">ТР ТС 004/2011</button>
+    <button class="nav-btn" onclick="showPage('p004020',event)">Декл. 004/020</button>
+    <button class="nav-btn" onclick="showPage('p020',event)">ТР ТС 020/2011</button>
+    <button class="nav-btn" onclick="showPage('p032',event)">ТР ТС 032/2013</button>
   </div>
 </div>
 
@@ -231,9 +231,9 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: ТР ТС 010/2011 ===== -->
 <div class="page-view active" id="p010">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span>
-  <a href="#">Услуги</a><span class="bc-sep">›</span>
-  <a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span>
+  <a href="javascript:void(0)">Услуги</a><span class="bc-sep">›</span>
+  <a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span>
   <span>Сертификат ТР ТС 010/2011</span>
 </div></div>
 
@@ -463,10 +463,10 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <div class="page-section">
   <h2 class="section-title">Смотрите также</h2>
   <div class="related-grid">
-    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС — общая страница</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 020/2011 (ЭМС)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 012/2011 (взрывозащита)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 032/2013 (давление)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Сертификат ТР ТС — общая страница</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Сертификат ТР ТС 020/2011 (ЭМС)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Сертификат ТР ТС 012/2011 (взрывозащита)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Сертификат ТР ТС 032/2013 (давление)</div><div class="related-arrow">›</div></a>
   </div>
 </div>
 
@@ -476,7 +476,7 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: ТР ТС 012/2011 ===== -->
 <div class="page-view" id="p012">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 012/2011</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span><a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 012/2011</span>
 </div></div>
 <div class="hero">
   <div class="hero-inner">
@@ -601,10 +601,10 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <div class="page-section">
   <h2 class="section-title">Смотрите также</h2>
   <div class="related-grid">
-    <a class="related-link" href="#" onclick="showPage('p010')"><div class="related-link-text">Сертификат ТР ТС 010/2011 (машины и оборудование)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#" onclick="showPage('p032')"><div class="related-link-text">Сертификат ТР ТС 032/2013 (оборудование под давлением)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#" onclick="showPage('p020')"><div class="related-link-text">Сертификат ТР ТС 020/2011 (ЭМС)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Отказное письмо (если не под регламент)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)" onclick="showPage('p010',event)"><div class="related-link-text">Сертификат ТР ТС 010/2011 (машины и оборудование)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)" onclick="showPage('p032',event)"><div class="related-link-text">Сертификат ТР ТС 032/2013 (оборудование под давлением)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)" onclick="showPage('p020',event)"><div class="related-link-text">Сертификат ТР ТС 020/2011 (ЭМС)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Отказное письмо (если не под регламент)</div><div class="related-arrow">›</div></a>
   </div>
 </div>
 
@@ -622,7 +622,7 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: ТР ТС 019/2011 ===== -->
 <div class="page-view" id="p019">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 019/2011</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span><a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 019/2011</span>
 </div></div>
 <div class="hero">
   <div class="hero-inner">
@@ -735,7 +735,7 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: ТР ТС 004/2011 ===== -->
 <div class="page-view" id="p004">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 004/2011</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span><a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 004/2011</span>
 </div></div>
 <div class="hero">
   <div class="hero-inner">
@@ -845,7 +845,7 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: Декларация 004/020 ===== -->
 <div class="page-view" id="p004020">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Декларация ТР ТС 004/020</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span><a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Декларация ТР ТС 004/020</span>
 </div></div>
 <div class="hero">
   <div class="hero-inner">
@@ -924,7 +924,7 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: ТР ТС 020/2011 ===== -->
 <div class="page-view" id="p020">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 020/2011</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span><a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 020/2011</span>
 </div></div>
 <div class="hero">
   <div class="hero-inner">
@@ -1032,7 +1032,7 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <!-- ===== PAGE: ТР ТС 032/2013 ===== -->
 <div class="page-view" id="p032">
 <div class="breadcrumb"><div class="breadcrumb-inner">
-  <a href="#">Главная</a><span class="bc-sep">›</span><a href="#">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 032/2013</span>
+  <a href="javascript:void(0)">Главная</a><span class="bc-sep">›</span><a href="javascript:void(0)">Сертификат ТР ТС</a><span class="bc-sep">›</span><span>Сертификат ТР ТС 032/2013</span>
 </div></div>
 <div class="hero">
   <div class="hero-inner">
@@ -1194,10 +1194,10 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
 <div class="page-section">
   <h2 class="section-title">Смотрите также</h2>
   <div class="related-grid">
-    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 010/2011 (машины и оборудование)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Сертификат ТР ТС 012/2011 (взрывозащита)</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Декларация ТР ТС</div><div class="related-arrow">›</div></a>
-    <a class="related-link" href="#"><div class="related-link-text">Отказное письмо</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Сертификат ТР ТС 010/2011 (машины и оборудование)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Сертификат ТР ТС 012/2011 (взрывозащита)</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Декларация ТР ТС</div><div class="related-arrow">›</div></a>
+    <a class="related-link" href="javascript:void(0)"><div class="related-link-text">Отказное письмо</div><div class="related-arrow">›</div></a>
   </div>
 </div>
 </div>
@@ -1210,19 +1210,21 @@ body{font-family:'Inter',sans-serif;color:var(--gray-900);background:#f9fafb;fon
   <div class="site-footer-inner">
     <div>© 2026 Сертифико · ИП Харитонов Владислав Николаевич</div>
     <div>+7 (495) 248-38-00 · mail@certifyco.ru</div>
-    <div><a href="#">Политика конфиденциальности</a></div>
+    <div><a href="javascript:void(0)">Политика конфиденциальности</a></div>
   </div>
 </div>
 
 <script>
-function showPage(id){
-  document.querySelectorAll('.page-view').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+function showPage(id,e){
+  if(e){e.preventDefault();}
+  document.querySelectorAll('.page-view').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
+  var page=document.getElementById(id);
+  if(page){page.classList.add('active');}
   var btnMap={'p010':0,'p012':1,'p019':2,'p004':3,'p004020':4,'p020':5,'p032':6};
   var btns=document.querySelectorAll('.nav-btn');
   if(btns[btnMap[id]])btns[btnMap[id]].classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo(0,0);
 }
 function toggleFaq(el){
   var item=el.parentElement;
